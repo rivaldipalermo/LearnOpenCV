@@ -22,7 +22,7 @@ while True:
     interrupt = cv2.waitKey(10)
     if interrupt & 0xFF == 27:
         break
-    if interrupt & 0xFF == ord('c'):
+    elif interrupt & 0xFF == ord('c'):
         cv2.imwrite("ResultROI.jpg", roi)
 
 cap.release()
